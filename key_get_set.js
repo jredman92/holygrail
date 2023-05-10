@@ -1,11 +1,11 @@
 var redis = require("redis");
 var client = redis.createClient();
 
-client.on("error", function (error) {
-   console.error(error);
-});
+// client.on("error", function (error) {
+//    console.error(error);
+// });
 
-const multi = client.multi();
+// const multi = client.multi();
 
 client.set("my_key", "Hello World!");
 client.get("my_key", function (err, reply) {
